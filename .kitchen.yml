@@ -1,0 +1,25 @@
+driver:
+  name: vagrant
+  # provided as an example, see https://github.com/test-kitchen/kitchen-vagrant for more info
+  #
+  # customize:
+  #   memory: 1024
+  # network:
+  #   - ["forwarded_port", {guest: 80, host: 8080}]
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-1310
+    driver_config:
+      box: saucy-server-cloudimg-amd64
+      box_url: http://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-amd64-vagrant-disk1.box
+    run_list:
+      - recipe[apt]
+
+suites:
+  - name: default
+    run_list:
+      - recipe[gambaroff_com::default]
+    attributes:
