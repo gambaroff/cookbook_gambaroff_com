@@ -11,10 +11,10 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: ubuntu-1310
+  - name: ubuntu-1204lts
     driver_config:
-      box: saucy-server-cloudimg-amd64
-      box_url: http://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-amd64-vagrant-disk1.box
+      box: precise-server-cloudimg-amd64
+      box_url: http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box
     run_list:
       - recipe[apt]
 

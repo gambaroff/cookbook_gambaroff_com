@@ -4,8 +4,8 @@
 Vagrant.configure("2") do |config|
   # "gambaroff_com" - this is just here to find in your grep, please rename the hostname below (underscore character is not allowed in hostname) 
   config.vm.hostname = "gambaroff-com-berkshelf"
-  config.vm.box = "saucy-server-cloudimg-amd64"
-  config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-amd64-vagrant-disk1.box"
+  config.vm.box = "precise-server-cloudimg-amd64"
+  config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
   config.vm.boot_timeout = 120
 
   config.vm.network :private_network, ip: "33.33.33.10"
